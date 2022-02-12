@@ -8,6 +8,7 @@ import { BannerComponent } from './banner/banner.component';
 import { SecondaryBannerComponent } from './secondary-banner/secondary-banner.component';
 import { NewsletterComponent } from './newsletter/newsletter.component';
 import { FooterComponent } from './footer/footer.component';
+import {APP_BASE_HREF} from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { FooterComponent } from './footer/footer.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [{provide: APP_BASE_HREF, useValue: '/angular-theme/'}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
