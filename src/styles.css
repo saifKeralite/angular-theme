@@ -403,8 +403,31 @@ a {
     align-items: center;
     justify-content: center;
     text-align: center;
+    animation: colorChange 7s ease infinite;
+  }
+
+  .mobile-alert .message-point {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 11px 7px #0d0d0d36;
   }
   .body-content {
     display: none;
+  }
+}
+
+@keyframes colorChange {
+  25% {
+    background: #06c869;
+  }
+  50% {
+    background: #0651ca;
+  }
+  75% {
+    background: #ca0654;
+  }
+  100% {
+    background: #ffde3c;
   }
 }
