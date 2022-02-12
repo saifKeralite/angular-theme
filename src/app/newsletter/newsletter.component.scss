@@ -1,0 +1,44 @@
+.newsletter {
+  padding: 20px 0 40px 0;
+  width: 100%;
+  background: #f0f0f0;
+}
+
+.newsletter-content {
+  max-width: 490px;
+  p {
+    max-width: 400px;
+    margin-bottom: 50px;
+  }
+}
+
+.newsletter-input div {
+  position: relative;
+  width: 100%;
+}
+
+.newsletter-input input[type="text"] {
+  width: 100%;
+  height: 60px;
+  font-size: 27px;
+  background: #ffffff;
+  border: 1px solid #dcdcdc;
+  padding: 35px;
+}
+
+input[type="submit"] {
+  background: #000000;
+  padding: 10px 20px;
+  color: #ffffff;
+  border-radius: 20px;
+}
+
+.newsletter-input input[type="submit"] {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.newsletter-input input[type="text"]::placeholder {
+  color: #979797;
+}

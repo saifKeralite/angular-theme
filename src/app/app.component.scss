@@ -1,0 +1,56 @@
+.navbar-container {
+  display: flex;
+  align-items: center;
+}
+.nav-bar {
+  display: flex;
+  justify-content: flex-start;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  // padding: 0 180px 0 180px;
+  align-items: center;
+}
+
+.nav-bar a {
+  padding: 0 20px;
+  display: inline-block;
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.nav-bar nav {
+  transform: translateY(-100px);
+  animation: tr-down 0.4s ease 3.3s forwards;
+}
+
+.nav-bar .logo-link {
+  transform: translateY(-100px);
+  animation: tr-down 0.4s ease 3s forwards;
+  padding-left: 0;
+}
+
+.nav-bar.active {
+  @media screen and (min-width: 1281px) {
+    transform: translateX(-80px) !important;
+    transition: all 0.5s ease;
+    a {
+      transition: color 1s ease;
+      color: #ffffff;
+    }
+  }
+}
+
+// *************************
+// *************************
+// Animation keyframes
+// *************************
+// *************************
+
+@keyframes tr-down {
+  100% {
+    transform: translateY(0px);
+  }
+}

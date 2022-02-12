@@ -1,0 +1,53 @@
+<!-- Angular Project  -->
+<!-- Author: Muhammed Saifudeen  -->
+<!-- Pen: saifKeralite -->
+
+<!-- ----------------------- -->
+<!-- ----------------------- -->
+<!-- Alert for mobile  -->
+<div class="mobile-alert">This is a test project for desktop</div>
+<!-- ----------------------- -->
+<!-- ----------------------- -->
+<!-- Since this template uses animation, adding some extra classes -->
+<div class="body-content">
+  <app-loader [dataReady]="dataReady"></app-loader>
+  <app-banner (toggleClassStatus)="checkHoverStatus($event)"></app-banner>
+  <!-- ----------------------- -->
+  <!-- ----------------------- -->
+  <!-- ----------------------- -->
+  <!-- ----------------------- -->
+  <!-- The whole navbar will be handled here  -->
+  <!-- ----------------------- -->
+  <!-- ----------------------- -->
+  <!-- ----------------------- -->
+  <!-- ----------------------- -->
+  <!-- ----------------------- -->
+  <div class="nav-bar" [class.active]="clickToggle">
+    <div class="container navbar-container">
+      <a href="/" class="logo-link"><img src="/assets/logo.png" /></a>
+      <nav>
+        <a route-link="/home">Home</a>
+        <a route-link="/news">Production</a>
+        <a route-link="/About the author">Resources</a>
+        <a route-link="/About the author">Community</a>
+        <a route-link="/About the author">Meet Us</a>
+      </nav>
+    </div>
+  </div>
+  <div class="rest-content">
+    <!-- ----------------------- -->
+    <!-- ----------------------- -->
+    <!-- Adding secondary banner here  -->
+    <app-secondary-banner></app-secondary-banner>
+    <!-- ----------------------- -->
+    <!-- ----------------------- -->
+    <!-- Newsletter block  -->
+    <app-newsletter></app-newsletter>
+    <!-- ----------------------- -->
+    <!-- ----------------------- -->
+    <!-- Footer block  -->
+    <app-footer></app-footer>
+     <!-- ----------------------- -->
+    <!-- ----------------------- -->
+  </div>
+</div>

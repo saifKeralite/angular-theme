@@ -1,0 +1,117 @@
+.banner {
+  height: 640px;
+  width: 100%;
+  background: #ffde3c;
+  padding-top: 150px;
+  position: relative;
+}
+
+.hero-header {
+  position: relative;
+  h1 {
+    font-family: "Raleway", sans-serif;
+    max-width: 400px;
+    margin-top: 0;
+    position: relative;
+    z-index: 2;
+    font-weight: 800;
+    letter-spacing: 7px;
+    line-height: 50px;
+    opacity: 0;
+    animation: ln-grow 0.5s ease 3.6s forwards;
+    transition: color 1s ease;
+  }
+
+  .shadow-copy {
+    position: absolute;
+    top: 4px;
+    left: 7px;
+    color: #ffffff;
+    z-index: 1;
+    opacity: 0;
+    animation: ln-grow 0.5s ease 3.6s forwards, sh-show 1s ease forwards 4s;
+  }
+}
+
+.active {
+  @media screen and (min-width: 1281px) {
+    h1 {
+      color: #ffde3c !important;
+      transition: color 1s ease;
+    }
+
+    .shadow-copy {
+      opacity: 0 !important;
+    }
+  }
+}
+
+.hero-buttons {
+  margin-top: 75px;
+  opacity: 0;
+  animation: op-grow 1s ease 3.8s forwards;
+  .link-normal {
+    margin-left: 50px;
+  }
+}
+
+.hero-banner-image {
+  position: absolute;
+  right: 15px;
+  top: -50px;
+  transform: skew(10deg);
+  opacity: 0;
+  animation: sk-grow 1s ease 4s forwards;
+}
+
+// *************************
+// *************************
+// Animation keyframes
+// *************************
+// *************************
+@keyframes ln-grow {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    line-height: 100px;
+  }
+}
+
+@keyframes op-grow {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes sk-grow {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: skew(0deg);
+  }
+}
+
+@keyframes sh-show {
+  100% {
+    opacity: 1;
+  }
+}
+
+.upper-layout {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #000000;
+  transition: all 0.4s ease;
+  &.active {
+    @media screen and (min-width: 1281px) {
+      width: 55%;
+    }
+  }
+}
